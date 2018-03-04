@@ -401,7 +401,7 @@ func launchNodeAgent(buildBox string) bool {
 	agentLaunched := true
 	select {
 	case <-online:
-	case <-time.After(time.Second * 120):
+	case <-time.After(time.Second * 240):
 		log.Printf("Unable to launch the agent for %s successfully, shutting down", buildBox)
 		quit <- true
 		agentLaunched = false
