@@ -311,7 +311,7 @@ func keepOneBoxOnline() string {
 func isWorkingHour() bool {
 	location, err := time.LoadLocation(*locationName)
 	if err != nil {
-		log.Println("Could not load location: \"%s\" - will take all idle boxes offline", *locationName)
+		log.Println("Could not load location: " + *locationName + " - will take all idle boxes offline")
 		return false
 	}
 
